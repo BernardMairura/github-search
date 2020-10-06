@@ -7,6 +7,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class GithubService {
   username:string;
+  reponame:string
   clientId:string='60127b19fadef7d5c02e'
   clientSecret:string='73e80b9d31344d306be88a6116f2d9bd8edab29d'
 
@@ -26,4 +27,9 @@ export class GithubService {
   UpdateUser(username:string) {
     this.username = username;
   }
+
+  UpdateRepo(repo:string) {
+    this.reponame = repo;
+  }
+
 }
