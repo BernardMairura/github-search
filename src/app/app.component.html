@@ -6,7 +6,18 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<div class="container-fluid">
+    <div class="navbar bg-secondary">
+      <div>
+        <h1>GITHUB SEARCH</h1>
+      </div>
+  
+          <a class="nav-item nav-link active btn btn-light" routerLink="profile">Search User<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link btn btn-light" routerLink="/repo"> Search for Repos</a>
+  
+    </div>
+  </div>
+  <router-outlet></router-outlet>
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -18,5 +29,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-
-<app-profile></app-profile>
