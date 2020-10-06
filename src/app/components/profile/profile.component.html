@@ -1,8 +1,12 @@
-<form action="search-form">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Github User Name"[(ngModel)]='username' name="username" (keyup)="findUser()">
-    </div>
-</form>
+<!--form-->
+<div class="container-fluid">
+    <form action="search-form">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Github User Name"[(ngModel)]='username' name="username" (keyup)="findUser()">
+        </div>
+    </form>   
+</div>
+<!--form-->
 <div *ngIf="user">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -36,9 +40,9 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title">Repos</h3>
                             </div>
-                            <div class="panel-body" *ngFor="let repo for repos">
+                            <div class="panel-body" *ngFor="let repo of repos">
                                 <p>
-                                    {{repo.name}}
+                                    {{repo.name}}<a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning">View This On Github</a>
                                 </p>
                             </div>
                         </div>

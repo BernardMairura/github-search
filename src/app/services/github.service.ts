@@ -13,6 +13,7 @@ export class GithubService {
 
   constructor( private http:HttpClient) {
     this.username="BernardMairura"
+    this.reponame="delani_studio"
    }
 
   getData(): Observable <any> {
