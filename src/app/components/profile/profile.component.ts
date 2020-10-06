@@ -10,7 +10,7 @@ export class ProfileComponent implements OnInit {
 
   user: any;
   userRepos:any;
-  username: string = 'BernardMairura'
+  username: string = ''
   imageWidth: number = 150;
   imageHeight: number = 200;
 
