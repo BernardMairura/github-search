@@ -1,7 +1,9 @@
 <div *ngIf="user">
     <div class="panel panel-default">
         <div class="panel-heading">
-            {{user.name}}
+            {{user.name}}<small>({{user.login}})</small>
+            <span *ngIf="user.company">,Place of Work{{user.company}}</span>
+            {{user.location}}
         </div>
     </div>
 </div>
