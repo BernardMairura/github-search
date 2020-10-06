@@ -12,8 +12,32 @@
                 </div>
                 <div class="col-sm-5">
                     <ul class="list-group">
-                        <li class="list-group-item">{{user.bio}}</li>
+                        <li class="list-group-item" *ngIf="user.bio">{{user.bio}}</li>
+                        <li class="list-group-item" *ngIf="user.bio">Available for Hire</li>
+                        <li class="list-group-item" *ngIf="user.blog"><a href="{{user.blog}}" target="_blank">Website:{{user.blog}}</a></li>
+                        <li class="list-group-item" *ngIf="user.email"><a href="{{user.email}}" target="_blank">Email:{{user.email}}</a></li>
                     </ul>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <p>
+                            <span class="label label-default">{{user.followers}}Followers</span>
+                            <span class="label label-primary">Followings{{user.following}}</span>
+                            <span class="label label-success">{{user.public_gists}}Public Gists</span>
+                            <span class="label label-default">{{user.public_repos}}Public Repos</span>
+                        </p>
+                        <p><a href="{{user.html_url}}" class="btn btn-success btn-small">GithubProfile</a></p>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Repos</h3>
+                            </div>
+                            <div class="panel-body" *ngFor="let repo for repos">
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
