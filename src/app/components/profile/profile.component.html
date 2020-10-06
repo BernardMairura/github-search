@@ -1,6 +1,7 @@
-<div class="card-body">
-    <div class="row">
-        <div class='col-sm-3'>
-            <img [src]='user.avatar_url' [title]='user.name' [style.width.px]='imageWidth'
-                [style.height.px]='imageHeight'>
+<div *ngIf="user">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{user.name}}
         </div>
+    </div>
+</div>
