@@ -7,22 +7,22 @@ import {GithubService } from 'src/app/services/github.service'
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
-  repoitems:any[];
+  repo:any[];
   reponame:string="delani_studio"
 
   constructor(private githubService:GithubService) { }
 
   getRepos(){
-    this.githubService.UpdateRepo(this.reponame);
+    this.githubService.updateRepo(this.reponame);
 
-    this.githubService.getRepo().subscribe((repo)=>{
-      this.repoitems=repo["items"];
+    this.githubService.getRepo().subscribe((repos)=>{
+      this.reponame=repos
     });
   }
   
 
   ngOnInit(){
-    this.getRepos()
+  
   }
 
 }

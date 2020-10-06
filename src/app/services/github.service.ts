@@ -24,12 +24,12 @@ export class GithubService {
   return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id=" + this.clientId + "&client_secret=" + this.clientSecret)
 }
 
-  UpdateUser(username:string) {
+  updateUser(username:string) {
     this.username = username;
   }
 
-  UpdateRepo(repo:string) {
-    this.reponame = repo;
+  updateRepo(repos:string) {
+    this.reponame = repos;
   }
 
 }
