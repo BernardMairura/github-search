@@ -11,10 +11,11 @@ export class GithubService {
   clientId:string='60127b19fadef7d5c02e'
   clientSecret:string='73e80b9d31344d306be88a6116f2d9bd8edab29d'
 
-  constructor( private http:HttpClient) { }
+  constructor( private http:HttpClient) {
+    this.username="BernardMairura"
+   }
 
   getData(): Observable <any> {
-    const url ="https://api.github.com/users"
 
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientId + "&client_secret=" + this.clientSecret)
   }
