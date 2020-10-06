@@ -1,1 +1,20 @@
-<p>repo works!</p>
+<form action="search-form">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Repositories"[(ngModel)]='reponame' name="reponame" (keyup)="findRepos()">
+    </div>
+</form>
+<div *ngIf="repos">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="{{item.html_url}}" target="_blank"><strong>{{repo.name}}</strong></a>
+                    <p><strong>Created:</strong> {{repo.created_at|dateAgo}}</p>
+                    <p><strong>Created by:</strong> {{repo.owner.login}}</p>
+                    <p><strong>Language used:</strong> {{repo.language}}</p>
+                    <p>{{repo.description}}</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,9 +12,8 @@ export class RepoComponent implements OnInit {
 
   constructor(private githubService:GithubService) { }
 
-  getRepos(){
+  findRepos(){
     this.githubService.updateRepo(this.reponame);
-
     this.githubService.getRepo().subscribe((repos)=>{
       this.reponame=repos
     });
