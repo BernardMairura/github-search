@@ -1,14 +1,18 @@
-<form action="search-form">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Github user search"[(ngModel)]='username' name="username" (keyup)="findUser()">
-    </div>
-</form>
+<!--form-->
+<div class="container-fluid">
+    <form action="search-form">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Github User Name"[(ngModel)]='username' name="username" (keyup)="findUser()">
+        </div>
+    </form>   
+</div>
+<!--form-->
 <div *ngIf="user">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            {{user.name}}<small>({{user.login}})</small>
-            <span *ngIf="user.company">,Place of Work{{user.company}}</span>
-            {{user.location}}
+    <div class="jumbotron">
+        <div class="card">
+            Name: {{user.name}}<small>,({{user.login}})</small>
+            <span *ngIf="user.company">Place of Work: {{user.company}}</span>
+            Location: {{user.location}}
         </div>
         <div class="panel-body">
             <div class="row">
@@ -26,19 +30,20 @@
                 <div class="col-sm-4">
                     <div>
                         <p>
-                            <span class="label label-default">{{user.followers}}Followers</span>
-                            <span class="label label-primary">Followings{{user.following}}</span>
-                            <span class="label label-success">{{user.public_gists}}Public Gists</span>
-                            <span class="label label-default">{{user.public_repos}}Public Repos</span>
+                            <button type="button" class="btn btn-success">Followers<span class="badge">{{user.followers}}</span></button>
+                            <button type="button" class="btn btn-success">Following<span class="badge">{{user.following}}</span></button>
+                            <button type="button" class="btn btn-danger">Public Gists<span class="badge">{{user.public_gists}}</span></button>
+                            <button type="button" class="btn btn-danger">Public Repos<span class="badge">{{user.public_repos}}</span></button>
+                              
                         </p>
-                        <p><a href="{{user.html_url}}" class="btn btn-success btn-small">GithubProfile</a></p>
+                        <p><a href="{{user.html_url}}" class="btn btn-primary btn-small">GithubProfile</a></p>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Repos</h3>
                             </div>
-                            <div class="panel-body" *ngFor="let repo for repos">
+                            <div class="panel-body" *ngFor="let repo of repos">
                                 <p>
-                                    {{repo.name}}
+                                    {{repo.name}}<a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning">View This On Github</a>
                                 </p>
                             </div>
                         </div>

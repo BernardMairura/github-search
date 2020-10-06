@@ -9,8 +9,8 @@ import {GithubService} from 'src/app/services/github.service'
 export class ProfileComponent implements OnInit {
 
   user: any;
-  userRepos:any;
-  username: string = 'BernardMairura'
+  repo:any;
+  username: string = 'BernardMAirura'
   imageWidth: number = 150;
   imageHeight: number = 200;
 
