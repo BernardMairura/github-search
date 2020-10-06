@@ -5,5 +5,17 @@
             <span *ngIf="user.company">,Place of Work{{user.company}}</span>
             {{user.location}}
         </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="{{user.avatar_url}}" class="img-circle img-responsive" alt="user image">
+                </div>
+                <div class="col-sm-5">
+                    <ul class="list-group">
+                        <li class="list-group-item">{{user.bio}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
