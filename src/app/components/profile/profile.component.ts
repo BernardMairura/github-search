@@ -19,18 +19,17 @@ export class ProfileComponent implements OnInit {
    }
 
 
-  getUsers(){
-
-    this.githubService.UpdateUser(this.username);
-
+  findUser(){
+    this.githubService.updateUser(this.username);
     this.githubService.getData().subscribe((user)=>{
       console.log(user)
       this.user=user;
     });
   }
+
   
   ngOnInit(){
-    this.getUsers()
+   
   }
 }
 

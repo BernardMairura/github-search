@@ -1,27 +1,59 @@
-# Githubsearch
+<!--headings-->
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
+# Moringa Core-Github Search
 
-## Development server
+#### Using Angular CLI. 2nd Oct 2020
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+* A website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories using this App.
+**The user should be able to;**
+~ Search for Github users
+~ Search and view repositories of the Github user
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup/Installation Requirements
 
-## Build
+* This programme has been setup on a linux environment.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+**Below are the procedures;**
++ [nvm]($ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash)
++ [node.js]$ nvm install node
++ [angularCLI]$ npm install -g @angular/cli
++ Watchman Installation-it exists to watch files and record when they change. It can also trigger actions (such as rebuilding assets) when matching files change.
++ [Typescript]$ npm install -g typescript
++ [Bootstrap]Apply the Bootsrap CDN/download
++ Install [angular-cli-ghpages]($ npm i angular-cli-ghpages --save-dev)
++ Run build($ ng build --prod --base-href "https://GithubUserName.github.io/GithubRepoName/" )
++ Deploy to gh-pages($ npx angular-cli-ghpages --dir=dist/Project-name)
 
-## Running unit tests
+## Known Bugs
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+None as at now.
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+The topics or modules covered in this project include but not limited to;
 
-## Further help
+* [Figma](https://www.figma.com/file/2MgCk9DZe1ChVbGWVaoIJx/Untitled?node-id=1%3A2)
+* Bootstrap
+* Angular CLI
+* Facebook Watchman
+* Github
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Support and contact details
+
+For support and any queries relating to this project please reach us through;
+
+1. Email: bernardmairura@gmail.com
+
+
+### Contributors
+
+ **Bernard Mairura: <bernardmairura@gmail.com>**
+ 
+
+### License and Copyright
+
+Copyright (c) {www.QuotesApp.com, Moringa School, year 2020}
+
+License under the [MIT License](LICENSE)

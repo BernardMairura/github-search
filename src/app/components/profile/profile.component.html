@@ -1,3 +1,8 @@
+<form action="search-form">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Github user search"[(ngModel)]='username' name="username" (keyup)="findUser()">
+    </div>
+</form>
 <div *ngIf="user">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -33,7 +38,7 @@
                             </div>
                             <div class="panel-body" *ngFor="let repo for repos">
                                 <p>
-
+                                    {{repo.name}}
                                 </p>
                             </div>
                         </div>
