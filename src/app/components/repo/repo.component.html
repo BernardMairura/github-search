@@ -2,22 +2,23 @@
 <div class="container-fluid">
     <form action="search-form">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Repositories"[(ngModel)]='repos' name="repos" (keyup)="findRepo()">
+            <input type="text" class="form-control" placeholder="Repositories"[(ngModel)]='repo' name="repo" (keyup)="findRepo()">
         </div>
     </form>
 </div>
 <!--form-->
-<div *ngIf="repos">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            
-                
-                    <a href="{{item.html_url}}" target="_blank"><strong>{{repo.name}}</strong></a>
-                    <p><strong>Created:</strong> {{repo.created_at|dateAgo}}</p>
-                    <p><strong>Created by:</strong> {{repo.owner.login}}</p>
-                    <p><strong>Language used:</strong> {{repo.language}}</p>
-                    <p>{{repo.description}}</p> 
-           
-        </div>
+<div class="card bg-light" *ngIf="repo">
+    <div class="card-header">
+        <h2>Repos</h2>
     </div>
+    <div class="card-body " *ngFor="let repo of repo">
+        <div class="card row">
+            <div class="card-body">
+                <h3>{{repo.name}}</h3>
+                <p>Created: {{repo.created_at | dateAgo}}</p>
+                <p>Language Used: {{repo.language}}</p>
+                <p>{{repo.description}}</p>
+                <span><a href="{{repo.html_url}}" target="_blank" class="btn btn-success">View Project</a></span>
+    </div>
+</div>
 </div>
