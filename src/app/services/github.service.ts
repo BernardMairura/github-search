@@ -18,6 +18,11 @@ export class GithubService {
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientId + "&client_secret=" + this.clientSecret)
   }
 
+  getRepo():Observable<any>{
+
+  return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id=" + this.clientId + "&client_secret=" + this.clientSecret)
+}
+
   UpdateUser(username:string) {
     this.username = username;
   }
