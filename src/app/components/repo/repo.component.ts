@@ -8,7 +8,7 @@ import {Repo} from 'src/app/repo'
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
-  repo:any[];
+  repoitems:any[];
   repoName:string;"delani_studio"
 
   constructor(private githubService:GithubService) { 
@@ -20,8 +20,8 @@ export class RepoComponent implements OnInit {
   findRepo(){
     this.githubService.updateRepo(this.repoName);
     this.githubService.searchRepo().subscribe((repo)=>{
-      console.log(this.repo);
-      this.repo=repo["items"];
+      console.log(this.repoitems);
+      this.repoitems=repo["items"];
     });
   }
   ngOnInit(){
