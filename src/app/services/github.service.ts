@@ -12,6 +12,8 @@ export class GithubService {
   username:string;
   clientId:string='60127b19fadef7d5c02e'
   clientSecret:string='73e80b9d31344d306be88a6116f2d9bd8edab29d'
+  apiKey:string="?access_token=597ce780a01b7e3e5ce4038396817bedb60d5a0a"
+ 
 
   constructor( private http:HttpClient) {
     this.username="BernardMairura"
@@ -30,7 +32,7 @@ export class GithubService {
 
 searchRepo() {
   return this.http.get('https://api.github.com/search/repositories?q=' + this.repoName, ({
-    headers: new HttpHeaders({Authorization: `token ${environment}`})
+    headers: new HttpHeaders({Authorization: `access_token ${this.apiKey}`})
   }))
 }
 
