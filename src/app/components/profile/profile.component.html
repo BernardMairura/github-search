@@ -37,7 +37,7 @@
                               
                         </p>
                         <p><a href="{{user.html_url}}" class="btn btn-primary btn-small">GithubProfile</a></p>
-                        <div class="panel panel-default">
+                        <div class="panel panel-default" *ngIf="user.public_repos">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Repos</h3>
                             </div>

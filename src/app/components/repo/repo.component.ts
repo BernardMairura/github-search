@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {GithubService } from 'src/app/services/github.service'
+import {GithubService } from 'src/app/services/github.service';
 import {Repo} from 'src/app/repo'
 
 @Component({
@@ -8,8 +8,8 @@ import {Repo} from 'src/app/repo'
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
-  repo:Repo;
-  username:string;
+  repo:any[];
+  repoName:string;"delani_studio"
 
   constructor(private githubService:GithubService) { 
     console.log('repo service ready');
@@ -17,20 +17,13 @@ export class RepoComponent implements OnInit {
   
   
 
-  /*findRepo(){
-    this.githubService.updateRepo(this.username);
-    this.githubService.getRepo().subscribe((repo)=>{
-      console.log(this.repos);
-      this.repos=repo["items"];
-    });*/
-
-    findRepo(){
-      this.githubService.updateRepo(this.username);
-      this.githubService.repoRequest();
-      this.repo=this.githubService.repo
+  findRepo(){
+    this.githubService.updateRepo(this.repoName);
+    this.githubService.searchRepo().subscribe((repo)=>{
+      console.log(this.repo);
+      this.repo=repo["items"];
+    });
   }
-  
-
   ngOnInit(){
   this.findRepo()
   }
