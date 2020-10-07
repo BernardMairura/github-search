@@ -17,7 +17,7 @@ export class GithubService {
 
   constructor( private http:HttpClient) {
     this.username="BernardMairura"
-    this.repoName="delani_studio"
+    this.repoName="string"
    }
 
   getData(): Observable <any> {
