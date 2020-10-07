@@ -9,7 +9,7 @@ import {GithubService} from 'src/app/services/github.service'
 export class ProfileComponent implements OnInit {
 
   user: any;
-  repo:any;
+  repos:any;
   username: string = 'BernardMAirura'
   imageWidth: number = 150;
   imageHeight: number = 200;
@@ -25,7 +25,14 @@ export class ProfileComponent implements OnInit {
       console.log(user)
       this.user=user;
     });
+
+    this.githubService.getRepo().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    })
   }
+
+
 
   
   ngOnInit(){
