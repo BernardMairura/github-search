@@ -34,7 +34,7 @@ None as at now.
 
 The topics or modules covered in this project include but not limited to;
 
-* [Figma](https://www.figma.com/file/2MgCk9DZe1ChVbGWVaoIJx/Untitled?node-id=1%3A2)
+* [Figma](https://www.figma.com/file/1unATe7Td7JAZZQs3sCg0w/Github-Search?node-id=0%3A1)
 * Bootstrap
 * Angular CLI
 * Facebook Watchman
